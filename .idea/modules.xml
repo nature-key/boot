@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/boot-order-service-gmill-customer/boot-order-service-gmill-customer.iml" filepath="$PROJECT_DIR$/boot-order-service-gmill-customer/boot-order-service-gmill-customer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/boot/boot-user-service-gmil-provider.iml" filepath="$PROJECT_DIR$/boot/boot-user-service-gmil-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmailinterface/gmailinterface.iml" filepath="$PROJECT_DIR$/gmailinterface/gmailinterface.iml" />
+    </modules>
+  </component>
+</project>
