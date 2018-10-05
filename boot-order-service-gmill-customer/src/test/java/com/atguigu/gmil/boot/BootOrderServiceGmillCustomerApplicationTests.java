@@ -1,4 +1,4 @@
-package com.atguigu.gmil.bootorderservicegmillcustomer;
+package com.atguigu.gmil.boot;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

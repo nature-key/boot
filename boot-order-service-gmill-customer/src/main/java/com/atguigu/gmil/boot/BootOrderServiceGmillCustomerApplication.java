@@ -1,4 +1,4 @@
-package com.atguigu.gmil.bootorderservicegmillcustomer;
+package com.atguigu.gmil.boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

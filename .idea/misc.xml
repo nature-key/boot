@@ -9,6 +9,8 @@
         <option value="$PROJECT_DIR$/boot/pom.xml" />
         <option value="$PROJECT_DIR$/boot-order-service-gmill-customer/pom.xml" />
         <option value="$PROJECT_DIR$/gmailinterface/pom.xml" />
+        <option value="$PROJECT_DIR$/userserviceprovider/pom.xml" />
+        <option value="$PROJECT_DIR$/orderserviceconsumer/pom.xml" />
       </list>
     </option>
   </component>
