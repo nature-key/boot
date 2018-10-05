@@ -23,8 +23,8 @@ import org.springframework.stereotype.Service;
 public class OrderServiceImpl implements OrderService {
 
 	@Autowired
-	UserService userService;
-//	@Override
+	UserService  userService;
+	@Override
 	public List<UserAddress> initOrder(String userId) {
 		// TODO Auto-generated method stub
 		System.out.println("用户id："+userId);
@@ -35,7 +35,7 @@ public class OrderServiceImpl implements OrderService {
 		}
 		return addressList;
 	}
-
-
+	
+	
 
 }

@@ -1,3 +1,5 @@
+package com.atguigu.gmail;
+
 import java.io.IOException;
 
 import org.springframework.context.ApplicationContext;

@@ -1,12 +1,15 @@
 package com.atguigu.gmail.boot.service.imp;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.atguigu.gmail.bean.UserAddress;
 import com.atguigu.gmail.service.UserService;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
 
-
+@Service
+@Component
 public class UserServiceImpl implements UserService {
 
 	@Override

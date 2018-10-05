@@ -7,7 +7,7 @@
 		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
 	<!-- 1、指定当前服务/应用的名字（同样的服务名字相同，不要和别的服务同名） -->
-	<dubbo:application name="userserviceprovider"></dubbo:application>
+	<dubbo:application name="boot"></dubbo:application>
 	
 	<!-- 2、指定注册中心的位置 -->
 	<!-- <dubbo:registry address="zookeeper://127.0.0.1:2181"></dubbo:registry> -->
@@ -18,14 +18,14 @@
 	
 	<!-- 4、暴露服务   ref：指向服务的真正的实现对象 -->
 	<dubbo:service interface="com.atguigu.gmail.service.UserService" ref="userServiceImpl01" version="1.0.0"/>
-	<dubbo:service interface="com.atguigu.gmail.service.UserService" ref="userServiceImpl02" version="2.0.0"/>
+	<!--<dubbo:service interface="com.atguigu.gmail.service.UserService" ref="userServiceImpl02" version="2.0.0"/>-->
 
 	<!--统一设置服务提供方的规则  -->
 
 	
 	<!-- 服务的实现 -->
-	<bean id="userServiceImpl01" class="com.atguigu.gmail.service.imp.UserServiceImpl"></bean>
-	<bean id="userServiceImpl02" class="com.atguigu.gmail.service.imp.UserServiceImpl2"></bean>
+	<bean id="userServiceImpl01" class="com.atguigu.gmail.boot.service.imp.UserServiceImpl"></bean>
+	<!--<bean id="userServiceImpl02" class="com.atguigu.gmail.service.imp.UserServiceImpl2"></bean>-->
 
 	
 

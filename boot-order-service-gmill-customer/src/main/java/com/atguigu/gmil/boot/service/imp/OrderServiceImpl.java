@@ -2,6 +2,7 @@ package com.atguigu.gmil.boot.service.imp;
 
 import java.util.List;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.atguigu.gmail.bean.UserAddress;
 import com.atguigu.gmail.service.OrderService;
 import com.atguigu.gmail.service.UserService;
@@ -14,7 +15,7 @@ import org.springframework.stereotype.Service;
  * 1、将服务提供者注册到注册中心（暴露服务）
  * 		1）、导入dubbo依赖（2.6.2）\操作zookeeper的客户端(curator)
  * 		2）、配置服务提供者
- * 
+ *
  * 2、让服务消费者去注册中心订阅服务提供者的服务地址
  * @author lfy
  *
@@ -22,7 +23,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class OrderServiceImpl implements OrderService {
 
-	@Autowired
+//	@Autowired
+	@Reference(url = "127.0.0.1:20882")
 	UserService userService;
 	@Override
 	public List<UserAddress> initOrder(String userId) {
@@ -35,7 +37,7 @@ public class OrderServiceImpl implements OrderService {
 		}
 		return addressList;
 	}
-	
-	
+
+
 
 }

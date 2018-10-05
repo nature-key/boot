@@ -13,14 +13,12 @@
         <module name="userserviceprovider" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="boot-order-service-gmill-customer" target="1.8" />
       <module name="boot-user-service-gmil-provider" target="1.8" />
-      <module name="gmailinterface" target="1.5" />
-      <module name="gmall-interface" target="1.5" />
-      <module name="order-service-consumer" target="1.5" />
-      <module name="orderserviceconsumer" target="1.5" />
-      <module name="userserviceprovider" target="1.5" />
+      <module name="gmailinterface" target="1.8" />
+      <module name="orderserviceconsumer" target="1.8" />
+      <module name="userserviceprovider" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
