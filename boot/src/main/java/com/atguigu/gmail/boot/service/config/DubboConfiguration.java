@@ -40,7 +40,7 @@ public class DubboConfiguration {
         ServiceConfig<UserService> serviceServiceConfig = new ServiceConfig();
         serviceServiceConfig.setInterface(UserService.class);
         serviceServiceConfig.setRef(userService);
-
+        serviceServiceConfig.setTimeout(2000);
         return serviceServiceConfig;
     }
 }

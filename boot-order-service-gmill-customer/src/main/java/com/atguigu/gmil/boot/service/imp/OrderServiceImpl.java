@@ -1,11 +1,13 @@
 package com.atguigu.gmil.boot.service.imp;
 
+import java.util.Arrays;
 import java.util.List;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.atguigu.gmail.bean.UserAddress;
 import com.atguigu.gmail.service.OrderService;
 import com.atguigu.gmail.service.UserService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,8 +26,9 @@ import org.springframework.stereotype.Service;
 public class OrderServiceImpl implements OrderService {
 
 //	@Autowired
-	@Reference(url = "127.0.0.1:20882")
+	@Reference(loadbalance = "random")//(url = "127.0.0.1:20882")
 	UserService userService;
+	@HystrixCommand(fallbackMethod = "hello")
 	@Override
 	public List<UserAddress> initOrder(String userId) {
 //		 TODO Auto-generated method stub
@@ -38,6 +41,9 @@ public class OrderServiceImpl implements OrderService {
 		return addressList;
 	}
 
+	public List<UserAddress> hello(String userId){
 
+		return Arrays.asList(new UserAddress(10, "北京市昌平区宏福科技园综合楼3层测试", "测试", "刘虎", "010-56253825", "Y"));
+	}
 
 }
